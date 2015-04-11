@@ -26,8 +26,8 @@ use Data::Dumper;
 
 my $dbi = DBIx::Custom->connect(
     dsn => "dbi:mysql:database=hunter:localhost:3306",
-    user => "root",
-    password => "hunter1983907",
+    user => "",
+    password => "",
     option => {
         mysql_enable_utf8 => 1
     }
