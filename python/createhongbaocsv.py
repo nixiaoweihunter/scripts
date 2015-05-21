@@ -13,7 +13,7 @@ date = time.strftime("%Y-%m-%d",time.localtime(time.time()))
 
 os.chdir("/root/ni.xiaowei/hongbao/")
 
-conn = MySQLdb.connect(host="10.10.3.105",user="o2o_readonly",passwd="o2o_readonly",port=3307,db="db_o2o",charset="utf8")
+conn = MySQLdb.connect(host="",user="",passwd="",port=,db="",charset="utf8")
 cursor = conn.cursor()
 
 #订单明细
