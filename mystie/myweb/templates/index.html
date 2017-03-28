@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+<title>hello</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+<script src="//www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body>
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+
+
+
+<div class="query">
+  <form ng-app="" ng-controller="validateCtrl" action="/search/" method="get">
+  <input type="text" name="text" ng-model="text" required>
+  
+<!--
+  <span style="color:red" ng-show="myForm.text.$dirty && myForm.text.$invalid">
+  <span ng-show="myForm.text.$error.required">Text is required.</span>
+-->
+  
+  <input type="submit" ng-disabled="myForm.text.$dirty && myForm.text.$invalid" value="查询">
+  </form>
+  
+</div>
+
+
+   <div class="submit">
+              <form action="/submit/">
+                    <input type="submit" name="submit" class="submit"/>
+              </form>
+    </div>
+
+
+</body>
+</html>

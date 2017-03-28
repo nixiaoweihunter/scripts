@@ -1,0 +1,7 @@
+1.yum install gcc zlib zlib-devel openssl openssl-devel -y
+
+2.install python
+
+3.install pip
+curl -O https://bootstrap.pypa.io/get-pip.py
+

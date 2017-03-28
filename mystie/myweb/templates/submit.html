@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
+<script src="//www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body>
+
+<div class="submit">
+    <form ng-app="" ng-controller="validateCtrl" action="/insert/" method="post">{% csrf_token %}
+    <p>Title:&nbsp;&nbsp;<input type="text" name="title" ng-model="text" class="title" required/></p>
+    <p>Content:&nbsp;<textarea name="content" ng-model="content" class="text" required></textarea></p>
+        <input type="submit" name="submit" />
+        <input type="reset" name="reset" />
+     </form>
+</div>
+
+</body>
+</html>
