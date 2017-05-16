@@ -1,0 +1,222 @@
+Unhandled exception in thread started by <function wrapper at 0x7f603921e2a8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/root/python27/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/root/python27/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/root/python27/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/root/python27/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/root/python27/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/root/python27/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/root/python27/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/python27/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/python27/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/root/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/scripts/restfulapi/restfulapi/urls.py", line 21, in <module>
+    url(r'^', include('api.urls')),
+  File "/root/python27/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/root/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/scripts/restfulapi/api/urls.py", line 2, in <module>
+    from api import views
+  File "/root/scripts/restfulapi/api/views.py", line 7
+SyntaxError: Non-ASCII character '\xe5' in file /root/scripts/restfulapi/api/views.py on line 7, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Invalid HTTP_HOST header: '192.168.199.109:8000'. You may need to add u'192.168.199.109' to ALLOWED_HOSTS.
+[17/May/2017 00:11:17] "GET / HTTP/1.1" 400 61500
+Invalid HTTP_HOST header: '192.168.199.109:8000'. You may need to add u'192.168.199.109' to ALLOWED_HOSTS.
+[17/May/2017 00:11:18] "GET /favicon.ico HTTP/1.1" 400 61449
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 17, 2017 - 00:11:13
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+[17/May/2017 00:13:16] "GET / HTTP/1.1" 404 2067
+Not Found: /favicon.ico
+[17/May/2017 00:13:16] "GET /favicon.ico HTTP/1.1" 404 2100
+[17/May/2017 00:13:51] "GET /api HTTP/1.1" 301 0
+Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = get_response(request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/scripts/restfulapi/api/views.py", line 9, in api_list
+    return JsonResponse("hello")
+  File "/root/python27/lib/python2.7/site-packages/django/http/response.py", line 514, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[17/May/2017 00:13:51] "GET /api/ HTTP/1.1" 500 67622
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 17, 2017 - 00:13:10
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = get_response(request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/scripts/restfulapi/api/views.py", line 9, in api_list
+    return JsonResponse("hello:world")
+  File "/root/python27/lib/python2.7/site-packages/django/http/response.py", line 514, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[17/May/2017 00:30:30] "GET /api/ HTTP/1.1" 500 67775
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 17, 2017 - 00:30:26
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = get_response(request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/scripts/restfulapi/api/views.py", line 9, in api_list
+    return JsonResponse("{'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}")
+  File "/root/python27/lib/python2.7/site-packages/django/http/response.py", line 514, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[17/May/2017 00:31:28] "GET /api/ HTTP/1.1" 500 68038
+Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = get_response(request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/scripts/restfulapi/api/views.py", line 9, in api_list
+    return JsonResponse("{'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}")
+  File "/root/python27/lib/python2.7/site-packages/django/http/response.py", line 514, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[17/May/2017 00:31:33] "GET /api/ HTTP/1.1" 500 68038
+Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = get_response(request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/scripts/restfulapi/api/views.py", line 9, in api_list
+    return JsonResponse("{'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}")
+  File "/root/python27/lib/python2.7/site-packages/django/http/response.py", line 514, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[17/May/2017 00:31:44] "GET /api/ HTTP/1.1" 500 68038
+Internal Server Error: /api/
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = get_response(request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python27/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/scripts/restfulapi/api/views.py", line 9, in api_list
+    return JsonResponse("{'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}")
+  File "/root/python27/lib/python2.7/site-packages/django/http/response.py", line 514, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[17/May/2017 00:31:47] "GET /api/ HTTP/1.1" 500 68038
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 17, 2017 - 00:31:23
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f5ec32792a8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/root/python27/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/root/python27/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/root/python27/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/root/python27/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/root/python27/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/root/python27/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/root/python27/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/root/python27/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/python27/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/python27/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/python27/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/root/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/scripts/restfulapi/restfulapi/urls.py", line 21, in <module>
+    url(r'^', include('api.urls')),
+  File "/root/python27/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/root/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/root/scripts/restfulapi/api/urls.py", line 2, in <module>
+    from api import views
+  File "/root/scripts/restfulapi/api/views.py", line 9
+    return JsonResponse({"'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}",safe=False)
+                                                                                 ^
+SyntaxError: invalid syntax
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 17, 2017 - 00:34:46
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[17/May/2017 00:34:57] "GET /api/ HTTP/1.1" 200 52
