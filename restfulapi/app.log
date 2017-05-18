@@ -650,3 +650,41 @@ Django version 1.10.6, using settings 'restfulapi.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 [17/May/2017 21:55:11] "GET /api/ HTTP/1.1" 200 20
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 17, 2017 - 21:55:08
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[17/May/2017 21:59:12] "GET /api/ HTTP/1.1" 200 20
+[17/May/2017 21:59:14] "GET /api/ HTTP/1.1" 200 20
+[17/May/2017 21:59:15] "GET /api/ HTTP/1.1" 200 20
+[17/May/2017 21:59:16] "GET /api/ HTTP/1.1" 200 20
+[17/May/2017 21:59:19] "GET /api/ HTTP/1.1" 200 24
+[17/May/2017 21:59:28] "GET /api/ HTTP/1.1" 200 24
+[17/May/2017 21:59:35] "GET /api/ HTTP/1.1" 200 24
+[17/May/2017 21:59:47] "GET /api/ HTTP/1.1" 200 24
+[17/May/2017 21:59:49] "GET /api/ HTTP/1.1" 200 24
+[17/May/2017 22:01:20] "GET /api/ HTTP/1.1" 200 24
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 17, 2017 - 21:58:51
+Django version 1.10.6, using settings 'restfulapi.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[17/May/2017 22:02:12] "GET /api/ HTTP/1.1" 403 58
+[17/May/2017 22:02:16] "GET /api/ HTTP/1.1" 200 20
+Not Found: /
+[17/May/2017 22:37:44] "GET / HTTP/1.1" 404 1960
+[17/May/2017 22:37:53] "GET /api/ HTTP/1.1" 403 4542
+[17/May/2017 22:38:03] "GET /api/?json HTTP/1.1" 403 4572
+Not Found: /api/format
+[17/May/2017 22:38:11] "GET /api/format?json HTTP/1.1" 404 1995
+Not Found: /api/format=
+[17/May/2017 22:38:15] "GET /api/format=?json HTTP/1.1" 404 2000
+[17/May/2017 22:38:22] "GET /api/?format=json HTTP/1.1" 403 58
+[17/May/2017 22:38:44] "GET /api/ HTTP/1.1" 200 20
+[17/May/2017 22:38:58] "GET /api/ HTTP/1.1" 200 20
+[17/May/2017 22:39:24] "GET /api/?format=json HTTP/1.1" 403 58
