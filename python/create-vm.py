@@ -49,8 +49,7 @@ def create_vm(name, service_instance, vm_folder, resource_pool,datastore):
     disk_spec.fileOperation = "create"
     disk_spec.operation = vim.vm.device.VirtualDeviceSpec.Operation.add
     disk_spec.device = vim.vm.device.VirtualDisk()
-    disk_spec.device.backing = \
-            vim.vm.device.VirtualDisk.FlatVer2BackingInfo()
+    disk_spec.device.backing = vim.vm.device.VirtualDisk.FlatVer2BackingInfo()
     disk_spec.device.backing.thinProvisioned = True
     disk_spec.device.backing.diskMode = 'persistent'
     disk_spec.device.backing.fileName = '%s.vmdk'% vm_name
@@ -58,10 +57,28 @@ def create_vm(name, service_instance, vm_folder, resource_pool,datastore):
     disk_spec.device.capacityInKB = 1 * 1024 * 1024
     disk_spec.device.controllerKey = controller.key
 
+    #nicspec = vim.vm.ConfigSpec()
+    nic_spec = vim.vm.device.VirtualDeviceSpec()
+    nic_spec.operation = vim.vm.device.VirtualDeviceSpec.Operation.add
+    nic_spec.device = vim.vm.device.VirtualE1000()
+    nic_spec.device.deviceInfo = vim.Description()
+    nic_spec.device.deviceInfo.summary = 'vCenter API'
+    nic_spec.device.backing = vim.vm.device.VirtualEthernetCard.NetworkBackingInfo()
+    nic_spec.device.backing.useAutoDetect = False
+    nic_spec.device.backing.deviceName = "VM Network"
+    #nic_spec.deivce.connectable = vim.vm.device.VirtualDevice.ConnectInfo()
+    #nic_spec.device.connectable.startConnected = True
+    #nic_spec.device.connectable.allowGuestControl = True
+    #nic_spec.device.connectable.connected = False
+    #nic_spec.device.connectable.status = 'untried'
+    #nic_spec.device.wakeOnLanEnabled = True
+    #nic_spec.device.addressType = 'assigned'
+    #nic_spec.device.macAddress = mac
 
     dev_changes = []
     dev_changes.append( scsi_ctr )
     dev_changes.append( disk_spec )
+    dev_changes.append( nic_spec )
 #    spec.deviceChange = dev_changes
 
     
