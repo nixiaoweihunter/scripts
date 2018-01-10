@@ -7,10 +7,10 @@ from email.utils import parseaddr,formataddr
 import smtplib
 
 
-smtp_server = "smtp.ymm56.com"
-from_addr = "xiaowei.nixw@ymm56.com"
+smtp_server = ""
+from_addr = ""
 passwd = ""
-to_addr = "xiaowei.nixw@ymm56.com"
+to_addr = ""
 
 def _format_addr(s):
 	name, addr = parseaddr(s)
