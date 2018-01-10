@@ -6,7 +6,7 @@ import urllib2
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-index_url = "http://zabbix.ymm56.com/index.php"
+index_url = ""
 
 req = urllib2.Request( index_url, urllib.urlencode( {
                     'autologin': 1,
